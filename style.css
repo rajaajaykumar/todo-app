@@ -1,0 +1,158 @@
+body {
+  background-color: #eee;
+  font-family: "Poppins", sans-serif;
+  color: #000;
+}
+
+.nav {
+  background-color: #7fbbff;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.nav h1 {
+  font-size: 44px;
+  margin: 24px 0;
+}
+
+.nav p {
+  font-size: 14px;
+  margin-left: 12px;
+}
+
+.container {
+  background-color: #fff;
+  max-width: 600px;
+  margin: 160px auto 100px;
+  padding: 16px 48px;
+  border-radius: 8px;
+}
+
+h2 {
+  font-size: 28px;
+  margin: 16px;
+}
+
+.todo-add {
+  display: flex;
+  align-items: center;
+  background-color: #eee;
+  justify-content: space-between;
+  border-radius: 24px;
+  padding-left: 24px;
+  margin-bottom: 10px;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.add-task-btn {
+  border: none;
+  outline: none;
+  background-color: #2583ef;
+  padding: 16px 48px;
+  border-radius: 24px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  transition: opacity 0.1s;
+}
+
+.add-task-btn:hover {
+  opacity: 0.8;
+}
+
+.add-task-btn:active {
+  opacity: 0.6;
+}
+
+.list-container {
+  padding-left: 0;
+}
+
+ul li {
+  list-style: none;
+  font-size: 16px;
+  padding: 12px 8px 12px 48px;
+  margin-bottom: 8px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+ul li::before {
+  content: "";
+  background-image: url(images/unchecked.png);
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  left: 8px;
+}
+
+ul li:hover {
+  background-color: #eee;
+  border-radius: 24px;
+}
+
+.checked {
+  text-decoration: line-through;
+  color: #555;
+}
+
+ul li.checked::before {
+  background-image: url(images/checked.png);
+}
+
+ul li span {
+    position: relative;
+    margin-left: auto;
+    padding: 0 5px;
+    text-align: center;
+    transition: color 0.1s, background-color 0s, border-radius 0s;
+}
+
+ul li span:hover {
+    color: #ff0000;
+    background-color: #fff;
+    border-radius: 24px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 14px;
+  font-size: 14px;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.1s;
+}
+
+footer a:hover {
+  color: #2583ef;
+  text-decoration: underline;
+}
